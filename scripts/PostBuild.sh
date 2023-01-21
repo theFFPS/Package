@@ -14,6 +14,8 @@ do
     export LIBRARY_PATH=\${LIBRARY_PATH}:\${IPATH}lib64
     export PATH=\${PATH}:\${IPATH}bin
     export PATH=\${PATH}:\${IPATH}sbin
+    export LD_LIBRARY_PATH=\${LD_LIBRARY_PATH}:\${IPATH}lib
+    export LD_LIBRARY_PATH=\${LD_LIBRARY_PATH}:\${IPATH}lib64
 done" >> ${HOME_PATH_TO_USE}/.zshrc
 echo "for IPATH in \$(ls -d /Apps/*/)
 do
@@ -22,6 +24,8 @@ do
     export LIBRARY_PATH=\${LIBRARY_PATH}:\${IPATH}lib64
     export PATH=\${PATH}:\${IPATH}bin
     export PATH=\${PATH}:\${IPATH}sbin
+    export LD_LIBRARY_PATH=\${LD_LIBRARY_PATH}:\${IPATH}lib
+    export LD_LIBRARY_PATH=\${LD_LIBRARY_PATH}:\${IPATH}lib64
 done" >> ${HOME_PATH_TO_USE}/.bashrc
 touch ${HOME_PATH_TO_USE}/.package_postbuild_lock
 unset HOME_PATH_TO_USE
